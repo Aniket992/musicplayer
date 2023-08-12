@@ -246,23 +246,23 @@ Yaad Hai Na`,
   },
 ];
 
-let currentLyrics = "";
+// let currentLyrics = "";
 
-function updateLyrics(time) {
-  const lines = currentLyrics.split("\n");
-  for (let i = 0; i < lines.length; i++) {
-    if (time > i * 10 && time < (i + 1) * 10) {
-      // lyricsContainer.innerHTML = lines[i].replace(/\n/g, '<br>');
-      console.log(i);
-      break;
-    }
-  }
-}
+// function updateLyrics(time) {
+//   const lines = currentLyrics.split("\n");
+//   for (let i = 0; i < lines.length; i++) {
+//     if (time > i * 10 && time < (i + 1) * 10) {
+//       // lyricsContainer.innerHTML = lines[i].replace(/\n/g, '<br>');
+//       console.log(i);
+//       break;
+//     }
+//   }
+// }
 
-audioElement.addEventListener("timeupdate", () => {
-  const currentTime = audioElement.currentTime; // Get the current time
-  updateLyrics(currentTime);
-});
+// audioElement.addEventListener("timeupdate", () => {
+//   const currentTime = audioElement.currentTime; // Get the current time
+//   updateLyrics(currentTime);
+// });
 
 function createSongBox(song) {
   const newSongBox = document.createElement("div");
@@ -425,6 +425,7 @@ function formatTime(timeInSeconds) {
   const seconds = Math.floor(timeInSeconds % 60);
   return `${minutes}:${seconds.toString().padStart(2, "0")}`;
 }
+let songduration = document.getElementById("songduration");
 function duration() {
   currentduration.innerHTML = formatTime(audioElement.currentTime);
   songduration.innerHTML = formatTime(audioElement.duration);
