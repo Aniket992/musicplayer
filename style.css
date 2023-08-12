@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-image: url("background.webp");
+  position: relative;
+  /* position: inherit; */
+}
+.songlistbox {
+  border: 2px solid #2da91f; /* Add a border for visualization */
+
+  margin: 30px;
+  width: 500px;
+  height: 565px;
+  /* background-color: azure; */
+  background: rgba(300,300,300,0.1);
+  border-radius: 8px;
+  justify-content: center;
+  display: grid;
+}
+.player {
+  /* background-color: #111010; */
+  background: rgba(300,300,300,0.1);
+  margin-top: 0px;
+  margin-left: 30px;
+  max-width: 96%;
+  height: 150px;
+  border-radius: 8px;
+  align-items: center;
+  /* justify-content: center; */
+  border: 2px solid #2da91f; /* Add a border for visualization */
+align-items: center;
+  /* display: ; */
+}
+
+
+.songbox {
+  background-color: rgb(0, 0, 0);
+  
+  width: 450px;
+  height: 30px;
+  border-radius: 8px;
+  margin-top: 5px;
+  display: flex;
+  size: 10px;
+  color: #1dedf8;
+  /* justify-content:space-between; */
+  cursor: pointer;
+  /* align-items:center; */
+  text-align: justify;
+  /* text-align: start; */
+}
+/* Style the audio player container */
+#audioElement {
+  width: 100%;
+  /* max-width: 400px; */
+  margin: 0 auto;
+  border-radius: 8px;
+  background-color:#48614e;
+  /* color: #d04d4d; */
+}
+
+/* Style the audio player controls */
+#audioElement::-webkit-media-controls-panel {
+  background-color: #48614e;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+/* Style the play button */
+#audioElement::-webkit-media-controls-play-button {
+  background-color: #d6482c;
+  /* color: #e1f322 ; */
+  border-radius: 50%;
+  font-size: 50px;
+  
+}
+
+/* Style the volume slider */
+/*  */
+
+
+/* Style the progress bar fill (thumb) */
+#volumeSlider::-webkit-slider-thumb {
+  /* Change the color of the progress bar fill (thumb) */
+  background-color: #13bb16;
+  /* Add more styling as needed */
+}
+
+/* Style the marquee container */
+/* .marquee-container {
+  overflow: hidden;
+  width: 100%;
+} */
+
+/* Style the marquee content */
+/* .marquee {
+  /* display: inline-block; */
+  /* color: #2d84c3;
+  white-space: nowrap;
+  animation: marquee 1s linear infinite; /* Adjust animation duration as needed */
+/* }
+/* .marquee {
+  position: absolute;
+  /* top: 0; */
+  /* right: 0;
+  left: 0;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite; /* Adjust animation duration as needed */
+
+
+/* Keyframes for the marquee animation */
+/* @keyframes marquee {
+  from {
+      transform: translateX(100%);
+  }
+  to {
+      transform: translateX(-100%);
+  }
+} */ 
+.lyrics-container {
+  text-align: center;
+  margin-top: 20px;
+}
+#lyrics {
+  font-size: 18px;
+  line-height: 1.6;
+}
+.marquee-container{
+   /* text-decoration: #2d84c3; */
+  align-items: center; 
+  background-color: rgb(156, 117, 39);
+  color: rgb(228, 239, 24);
+  display: flex;
+  justify-content: center;
+  border-radius: 8px;
+  font-size: 20px;
+  font-style: italic;
+}
+
+
+.imagebox{
+  border-radius: 8px;
+  margin-top: 35px;
+  
+  height: 560px;
+  /* background-color: orange; */
+  background: rgba(300,300,300,0.1);
+  width:67%;
+ 
+}
+.inbox{
+  display: flex;
+  justify-content: left;
+}
+
+#imageboxtext{
+  /* background-color:wheat; */
+  overflow-y: auto; /* Enable vertical scrolling when content overflows */
+  border: 2px solid #2da91f; /* Add a border for visualization */
+align-items: center;
+/* justify-content:space-around; */
+text-align: center;
+font-size:x-large;
+font-family:Arial, Helvetica, sans-serif ;
+font-style: italic;
+background: rgba(300,300,300,0.2);
+color: #fcfc4e;
+font-weight: bolder;
+font-size: xx-large;
+}
+.navbar{
+  background-color: rgb(208, 208, 212);
+}
+.controller{
+  display:flex;
+  justify-content: center;
+  color: #13bb16;
+}
+ input{
+  width: 96%;
+  margin-left: 33px;
+
+}
