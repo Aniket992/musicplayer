@@ -183,3 +183,14 @@ font-size: xx-large;
   margin-left: 33px;
 
 }
+#volumeSlider{
+  width: 150px;
+}
+#mutebutton{
+
+  width: 30px;
+  height: 30px;
+  margin-left: 10px;
+  /* justify-content: space-around; */
+  /* display: flex; */
+}

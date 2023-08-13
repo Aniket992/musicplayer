@@ -278,6 +278,8 @@ function createSongBox(song) {
     audioSource.src = song.src;
     imageboxtext.innerHTML = song.lyrics.replace(/\n/g, "<br>"); // Replace newline characters with line breaks
 
+
+    
     if (audioElement.paused || audioElement.currentTime <= 0) {
       audioElement.load();
       audioElement.currentTime = x;
@@ -431,3 +433,40 @@ function duration() {
   songduration.innerHTML = formatTime(audioElement.duration);
 }
 const durationUpdate = setInterval(duration, 500);
+
+const volumeSlider = document.getElementById("volumeSlider");
+
+function adjustVolume(change) {
+  const newVolume = audioElement.volume + change / 100;
+  audioElement.volume = Math.min(1, Math.max(0, newVolume));
+  volumeSlider.value = audioElement.volume * 100; // Update the volume slider value
+ 
+}
+
+// Event listener to handle volume adjustment when the volume slider is interacted with
+volumeSlider.addEventListener("input", () => {
+  const newVolume = volumeSlider.value / 100;
+  audioElement.volume = newVolume;
+  if(volumeSlider.value>0){
+    mutebutton.src = "unmute2.png";
+  }
+    else{
+
+    mutebutton.src = "mute.jpg";
+  }
+});
+let mutebutton = document.getElementById("mutebutton");
+let y = 0.50;
+mutebutton.addEventListener("click",()=>{
+  if(volumeSlider.value>0){
+    audioElement.volume = 0;
+    volumeSlider.value =0;
+    mutebutton.src="mute.jpg";
+
+  }
+   else{
+    volumeSlider.value =50;
+    audioElement.volume = 0.50;
+    mutebutton.src="unmute2.png";
+   };
+})
