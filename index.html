@@ -37,13 +37,15 @@
         </div>
       </nav>
       <div class="inbox">
-      
-      <div class="songlistbox" id="songlistbox"> 
+        <div class="main">
         <div class="marquee-container">
+          
           <div class="marquee">
               <p id="songName">Song Title Goes Here</p>
           </div>
       </div>
+      <div class="songlistbox" id="songlistbox"> 
+        
         <div class="songbox" id="defaultSongBox">
             <div id="defaultSongContent">
                 <!-- Default song content goes here -->
@@ -51,16 +53,18 @@
             
         </div>
       </div>
-      <div class="imagebox" id = "imageboxtext">
-        <p></p>
-      </div>
     </div>
     
+    
+    <div class="half">
+    <div class="imagebox" id = "imageboxtext">
+      <p></p>
+    </div>
    <div class="player">
-    <audio id="audioElement" controls>
+    <!-- <audio id="audioElement" controls>
         <source id="audioSource" src="" type="audio/mpeg">
         Your browser does not support the audio element.
-    </audio>
+    </audio> -->
     <input
     type="range"
     name="range"
@@ -75,8 +79,10 @@
 
 
     <img src="back.png" id="backward"alt="" onclick="backseek(this)" >
-    <img src="pause.png" id="playbutton" alt="" onclick="changeImage(this)">
+    <img src="play.png" id="playbutton" alt="" onclick="changeImage(this)">
     <img src="for.png" id ="forward"alt="" onclick="forwardseek(this)">
+    <button id="nextButton">Next Song</button>
+
     <input
         type="range"
         id="volumeSlider"
@@ -85,13 +91,14 @@
         step="1"
         value="100"
       />
+
       <!-- <button class="mute" id="mutebutton" </button> -->
 <img src="unmute2.png" id="mutebutton" alt="" class="mute">
    </div>
 </div>
+</div>
 
-
-
+</div>
 
     <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script>
